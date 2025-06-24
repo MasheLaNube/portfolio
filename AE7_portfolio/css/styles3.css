@@ -1,0 +1,39 @@
+
+body {
+    background-color: #0f1117;
+    color: #e0e0e0;
+}
+
+.navbar {
+    background-color: #1f2229;
+}
+
+.navbar-brand, .nav-link {
+    color: #9ee6ff !important;
+}
+
+.consejo {
+    background-color: #1a1d24;
+    border-left: 4px solid #00ffe7;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+}
+
+.btn-cyber {
+    background-color: #00ffe7;
+    color: #0f1117;
+    border: none;
+}
+
+.btn-cyber:hover {
+    background-color: #00c3b4;
+}
+
+footer {
+    background-color: #1f2229;
+    color: #888;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 60px;
+}
