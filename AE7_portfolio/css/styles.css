@@ -1,0 +1,67 @@
+body {
+    background-color: #0f1117;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    background-color: #1f2229;
+}
+
+.navbar-brand, .nav-link {
+    color: #9ee6ff !important;
+}
+
+.hero {
+    background: linear-gradient(rgba(15, 17, 23, 0.9), rgba(15, 17, 23, 0.9)),
+    url('img/cyber-bg.jpg') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #00ffe7;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    color: #d0d0d0;
+}
+
+.btn-cyber {
+    background-color: #00ffe7;
+    color: #0f1117;
+    border: none;
+    margin-top: 20px;
+}
+
+.btn-cyber:hover {
+    background-color: #00c3b4;     
+}
+
+footer {
+    background-color: #1f2229;
+    color: #888;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 60px;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.carousel-item img {
+    max-height: 450px;
+    object-fit: cover;
+}
