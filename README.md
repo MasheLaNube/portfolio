@@ -1,6 +1,13 @@
 # pagina
-# portfolio
+#Portafolio personal
 
+Este proyecto consiste en la creación de un sitio web responsivo con el fin de desarrollar un portafolio personal.
+
+El sitio tiene acceso a varias páginas web, a través de la sección "Proyectos"
+
+
+#Proyectos
+#Página de Cyberseguridad
 Este proyecto consiste en un sitio web responsivo, moderno e interactivo que busca informar sobre conceptos clave de **ciberseguridad**, presentar **amenazas comunes** y brindar **consejos prácticos** para protegerse en línea.
 
 ## 📄 Estructura del sitio
@@ -21,6 +28,10 @@ El sitio está dividido en **tres páginas principales**:
 - Lista de buenas prácticas para mantenerse protegido en línea.
 - Formulario de contacto con validación en JavaScript.
 - Modal interactivo con un test de seguridad que da retroalimentación al usuario.
+
+
+#Página de memes
+Proyecto el cual presenta una variedad de memes, haciendo uso de modales y JavaScript.
 
 ---
 
