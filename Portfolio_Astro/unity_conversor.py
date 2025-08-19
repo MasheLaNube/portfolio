@@ -1,22 +1,16 @@
-def convert_units():
-    print("Astronomical Unit Converter")
-    print("1. Parsec to Light Years")
-    print("2. Astronomical Units to Kilometers")
-    print("3. Kilometers to Solar Radii")
-    option= input("Choose an option: ")
+class Astrounit:
+    def __init__(self):
+        pass
 
-    if option == "1":
-        parsecs= float(input("Enter the number of parsecs: "))
-        print(f"{parsecs} pc = {parsecs * 3.26156} light years")
+    def pc_to_ly(self, parsecs: float):
+        """Convierte parsecs a años luz"""
+        return parsecs * 3.26156
 
-    elif option == "2":
-        au= float(input("Enter the number of astronomical units: "))
-        print(f"{au} AU = {au * 149597870.7} km")
+    def au_to_km(self, au: float):
+        """Convierte unidades astronómicas a kilómetros"""
+        return au * 149597870.7
 
-    elif option == "3":
-        km= float(input("Enter the number of kilometers: "))
-        print(f"{km} km = {km / 695700} solar radii")
-
-    else:
-        print("Invalid option.")
+    def km_to_solar_radii(self, km: float):
+        """Convierte kilómetros a radios solares"""
+        return km / 695700
 
