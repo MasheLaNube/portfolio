@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Consejos de Seguridad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles3.css">
+    
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+        <a class="navbar-brand" href="index.html">Ciberseguridad</a>
+        <button class="navbar-toggler text-light" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index1.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="amenazas.html">Amenazas</a></li>
+            <li class="nav-item"><a class="nav-link" href="consejos.html">Consejos</a></li>
+            <li class="nav-item"><a class="nav-link" href="../principal.html">Portafolio</a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container my-5">
+        <h1 class="text-center mb-4">Consejos de Seguridad</h1>
+
+        <!-- Consejos -->
+        <div class="consejo">
+        <h5>Usa contraseñas seguras y únicas</h5>
+        </div>
+        <div class="consejo">
+        <h5>Activa la autenticación de dos factores (2FA)</h5>
+        </div>
+        <div class="consejo">
+        <h5>No hagas clic en enlaces sospechosos</h5>
+        </div>
+        <div class="consejo">
+        <h5>Actualiza tus dispositivos regularmente</h5>
+        </div>
+        <div class="consejo">
+        <h5>Evita redes Wi-Fi públicas para datos sensibles</h5>
+        </div>
+
+        <!-- Formulario de contacto -->
+        <section class="mt-5">
+        <h2 class="mb-3">¿Tienes dudas? Contáctanos</h2>
+        <form id="formularioContacto">
+            <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" required>
+            </div>
+            <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-cyber">Enviar</button>
+        </form>
+        <p class="mt-2" id="form-feedback"></p>
+        </section>
+
+        <!-- Botón para abrir el test -->
+        <div class="text-center mt-5">
+        <button class="btn btn-cyber" data-bs-toggle="modal" data-bs-target="#modalTest">Realizar test de seguridad</button>
+        </div>
+
+        <!-- MODAL TEST -->
+        <div class="modal fade" id="modalTest" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light">
+            <div class="modal-header">
+                <h5 class="modal-title">Test de Seguridad</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>1.</strong> ¿Cuál es una buena práctica al crear contraseñas?</p>
+                <select id="pregunta1" class="form-select mb-3">
+                <option value="">Selecciona una opción</option>
+                <option value="mala">Usar tu fecha de cumpleaños</option>
+                <option value="buena">Una combinación única con letras, números y símbolos</option>
+                <option value="mala">123456 o admin</option>
+                </select>
+
+                <p><strong>2.</strong> ¿Qué deberías hacer si recibes un correo sospechoso con un enlace?</p>
+                <select id="pregunta2" class="form-select mb-3">
+                <option value="">Selecciona una opción</option>
+                <option value="buena">No hacer clic y reportarlo</option>
+                <option value="mala">Hacer clic y ver qué es</option>
+                <option value="mala">Reenviarlo a tus contactos</option>
+                </select>
+
+                <div id="resultadoTest" class="mt-3"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-cyber" onclick="evaluarTest()">Enviar respuestas</button>
+            </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2025 Marcela López | Ciberseguridad
+    </footer>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script3.js"></script>
+</body>
+</html>

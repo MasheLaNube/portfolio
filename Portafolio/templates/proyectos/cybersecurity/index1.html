@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+{% endblock %}
+{% block content %}
+
+<!-- CARRUSEL -->
+<div id="carouselCyber" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="{% static 'img_cyber/cyber1.png' %}" class="d-block w-100" alt="Imagen de ciberseguridad 1">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Ciberseguridad 24/7</h5>
+                <p>Protege tus dispositivos de amenazas invisibles.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="{% static 'img_cyber/cyber2.jpg' %}" class="d-block w-100" alt="Imagen de ciberseguridad 2">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Redes seguras</h5>
+                <p>Evita accesos no autorizados con buenas prácticas.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="{% static 'img_cyber/cyber3.jpg' %}" class="d-block w-100" alt="Imagen de ciberseguridad 3">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Datos protegidos</h5>
+                <p>La privacidad es un derecho digital esencial.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCyber" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselCyber" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Siguiente</span>
+    </button>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Protege tu mundo digital</h1>
+    <p>
+        La ciberseguridad es esencial para resguardar tu identidad, tus datos y tu privacidad
+        en un entorno cada vez más conectado.
+    </p>
+    <a href="{% url 'proyectos:amenazas' %}" class="btn btn-cyber">
+        Conoce las amenazas
+    </a>
+</section>
+
+<!-- INTRO -->
+<section class="container my-3">
+    <h2 class="text-center mb-4">¿Qué es la Ciberseguridad?</h2>
+    <p class="lead text-center">
+        La ciberseguridad se refiere a la práctica de proteger sistemas, redes y programas de
+        ataques digitales. Estos ataques suelen buscar acceder, alterar o destruir información
+        confidencial.
+    </p>
+</section>
+
+<!-- NOTICIAS -->
+<section class="container my-5 pt-5">
+    <h2 class="text-center mb-4">Últimas Noticias en Ciberseguridad</h2>
+
+    <div class="row">
+
+        <div class="col-md-4 mb-4">
+            <div class="card bg-dark text-light h-100">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Exponen 16 mil millones de contraseñas
+                    </h5>
+                    <p class="card-text">
+                        Credenciales de Google, Apple y Facebook quedaron expuestas.
+                    </p>
+                    <a href="#" class="btn btn-cyber">Leer más</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card bg-dark text-light h-100">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Ataques a modelos de inteligencia artificial
+                    </h5>
+                    <p class="card-text">
+                        Nuevas amenazas dirigidas a infraestructuras de IA.
+                    </p>
+                    <a href="#" class="btn btn-cyber">Leer más</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card bg-dark text-light h-100">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Vulnerabilidad en iPhone permitió spyware
+                    </h5>
+                    <p class="card-text">
+                        Apple corrigió una falla crítica con iOS 18.3.1.
+                    </p>
+                    <a href="#" class="btn btn-cyber">Leer más</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer class="text-center py-4">
+    &copy; 2025 Marcela López | Sitio informativo sobre Ciberseguridad
+</footer>
+
+{% block extra_js %}
+<script src="{% static 'JS/script_cyber.js' %}"></script>
+{% endblock %}
+
+
+{% endblock %}

@@ -1,0 +1,282 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<style>
+/* Dark mode always on */
+body {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+}
+
+.hero-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
+                        url("{% static 'presentacion/program.png' %}");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 100px 20px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-bg h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1rem;
+}
+
+.hero-bg .lead {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Profile section */
+.profile-img {
+    width: clamp(120px, 20vw, 150px);
+    height: clamp(120px, 20vw, 150px);
+    object-fit: cover;
+    border: 4px solid #1e40af;
+    box-shadow: 0 10px 30px rgba(30, 64, 175, 0.3);
+}
+
+h2, h3 {
+    color: #60a5fa;
+}
+
+.text-muted {
+    color: #9ca3af !important;
+}
+
+/* Cards and lists - dark mode styling */
+.card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: #e0e0e0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(96, 165, 250, 0.2);
+}
+
+.list-group-item {
+    background-color: #1a1a1a;
+    border-color: #333;
+    color: #e0e0e0;
+    transition: all 0.3s;
+}
+
+.list-group-item:hover {
+    background-color: #252525;
+    border-left: 3px solid #60a5fa;
+    padding-left: 1.5rem;
+}
+
+/* Responsive container */
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+/* Section spacing */
+section {
+    margin-bottom: 3rem;
+}
+
+/* Responsive grid improvements */
+@media (max-width: 768px) {
+    .hero-bg {
+        padding: 60px 15px;
+        min-height: 50vh;
+        background-attachment: scroll;
+    }
+    
+    section {
+        margin-bottom: 2rem;
+    }
+    
+    .row.g-4 {
+        gap: 1rem !important;
+    }
+}
+
+/* Text justify for better readability */
+.text-justify {
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* Links styling */
+a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #93c5fd;
+    text-decoration: underline;
+}
+
+/* Shadow improvements for dark mode */
+.shadow, .shadow-sm {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+}
+
+.form-control {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    color: #e5e7eb;
+}
+
+.form-control::placeholder {
+    color: #9ca3af;
+}
+
+.form-control:focus {
+    background-color: #0f172a;
+    color: #e5e7eb;
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 0.2rem rgba(96, 165, 250, 0.25);
+}
+
+</style>
+
+<!-- Hero principal -->
+<section class="text-white position-relative hero-bg">
+    <h1 class="display-4 fw-bold mb-3 text-center">
+        Scientific Portfolio
+    </h1>
+    <p class="lead text-center">
+        Exoplanets • Light Curves • TESS • Planetary Science • Variable Stars
+    </p>
+</section>
+
+<!-- Contenido principal -->
+<div class="container my-5">
+
+    <!-- PERFIL -->
+    <div class="text-center mb-5">
+        <img src="{% static 'img/perfil.jpg' %}"
+            class="rounded-circle shadow profile-img">
+        
+        <h2 class="mt-3 fw-bold">Marcela López</h2>
+        <p class="text-muted">PhD student • UDA • Researcher in Training</p>
+    </div>
+
+    <!-- INTRO -->
+    <section class="mb-5">
+        <h3 class="fw-bold mb-3">About Me</h3>
+        <p class="fs-5 text-justify">
+            I am <strong>Marcela López</strong> (But you can call me Mashe), currently pursuing a PhD degree in Astronomy and planetary sciences
+        </p>
+        <p class="fs-5 text-justify">
+            My primary research interests encompass the study of exoplanets, planetary system modeling,
+            and light curve analysis. I am particularly interested in expanding my expertise into Solar System 
+            science, exploring the intersection between exoplanetary research and our own planetary system. 
+            Additionally, I have conducted research on variable stars, with a paper currently under review 
+            for publication.
+        </p>
+    </section>
+
+    <!-- INTERESES -->
+    <section class="mb-5">
+        <h3 class="fw-bold mb-3">Research Interests</h3>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <ul class="list-group shadow-sm">
+                    <li class="list-group-item">Exoplanetary atmospheres and characterization</li>
+                    <li class="list-group-item">Observational analysis of variable stars</li>
+                    <li class="list-group-item">Solar System dynamics and compositional studies</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-group shadow-sm">
+                    <li class="list-group-item">Planetary system dynamics and evolution</li>
+                    <li class="list-group-item">Photometric and spectroscopic monitoring of pulsating stars</li>
+                    <li class="list-group-item">Compositional analysis and dynamics of Solar System bodies</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section class="mb-5">
+        <h3 class="fw-bold mb-3">Research Experience</h3>
+        <div class="list-group shadow">
+            <span class="list-group-item">MOTE project researcher – Monitoring of transiting exoplanets, focusing on the development 
+                and application of tools for data analysis and curve cleaning. Working with data from TESS and SPECULOOS.</span>
+            <span class="list-group-item">VVVX Science Team member – Studies of star clusters, variable searches and low-mass stars.</span>
+        </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="mb-5">
+        <h3 class="fw-bold mb-3">Current Projects</h3>
+
+        <div class="card shadow-sm p-4 mb-3">
+            <strong>REBECCA:</strong> A comprehensive pipeline for real-time TESS data extraction and cleaning.
+        </div>
+
+        <div class="card shadow-sm p-4 mb-3">
+            <strong>VVVX Research project:</strong> Analysis of variable stars in the VVVX survey, focusing on low-mass stars.
+        </div>
+
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="mb-5">
+        <h3 class="fw-bold mb-3">Contact Information</h3>
+        <p class="fs-5">
+            Email: <a href="mailto:marcelalopezulloa@gmail.com"><strong>marcelalopezulloa@gmail.com</strong></a>
+        </p>
+        <p class="fs-5">
+            LinkedIn: <a href="https://www.linkedin.com/in/marcela-l%C3%B3pez-747981201/" target="_blank"><strong>mi perfil LinkedIn</strong></a>
+        </p>
+        <p class="text-muted">GitHub profile available upon request</p>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section class="mb-5">
+        <h3 class="fw-bold mb-3">Get in touch</h3>
+
+        <form method="POST" class="card shadow-sm p-4">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                {{ form.name.label_tag }}
+                {{ form.name }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.email.label_tag }}
+                {{ form.email }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.subject.label_tag }}
+                {{ form.subject }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.message.label_tag }}
+                {{ form.message }}
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+                Send message
+            </button>
+        </form>
+    </section>
+
+
+
+</div>
+
+{% endblock %}

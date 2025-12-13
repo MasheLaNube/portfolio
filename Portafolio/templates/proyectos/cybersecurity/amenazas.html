@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+{% endblock %}
+{% block content %}
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container my-5">
+        <h1 class="text-center mb-5">Tipos de Amenazas y Virus Cibernéticos</h1>
+
+        <div class="seccion-virus">
+            <h3 class="titulo-virus" style="cursor:pointer;">Phishing</h3>
+            <div class="contenido-virus">
+                <p>Es una técnica de engaño donde los atacantes se hacen pasar por entidades confiables (como bancos o servicios conocidos) para robar información personal, como contraseñas o números de tarjetas, generalmente a través de correos electrónicos o mensajes falsos.</p>
+            </div>
+        </div>
+
+        <div class="seccion-virus">
+            <h3 class="titulo-virus" style="cursor:pointer;">Ransomware</h3>
+            <div class="contenido-virus">
+                <p>Es un tipo de malware que bloquea el acceso a tus archivos o sistema y exige un rescate económico (ransom) para desbloquearlos. A menudo cifra los archivos y amenaza con borrarlos si no se paga. </p>
+            </div>
+        </div>
+
+        <div class="seccion-virus">
+            <h3 class="titulo-virus" style="cursor:pointer;">Spyware</h3>
+            <div class="contenido-virus">
+                <p>Es un software malicioso que espía al usuario sin su consentimiento, recopilando información como historial de navegación, contraseñas, o hábitos de uso, y enviándola a terceros. </p>
+            </div>
+        </div>
+
+        <div class="seccion-virus">
+            <h3 class="titulo-virus" style="cursor:pointer;">Malware</h3>
+            <div class="contenido-virus">
+                <p>Término general que agrupa todos los tipos de software malicioso (incluye virus, troyanos, ransomware, etc.) diseñado para dañar o infiltrarse en un sistema sin permiso del usuario. </p>
+            </div>
+        </div>
+
+        <div class="seccion-virus">
+            <h3 class="titulo-virus" style="cursor:pointer;">Keylogger</h3>
+            <div class="contenido-virus">
+                <p>Es una herramienta (maliciosa o legítima) que registra las pulsaciones del teclado, permitiendo a un atacante obtener contraseñas, mensajes o información confidencial escrita por el usuario. </p>
+            </div>
+        </div>
+
+        <div class="seccion-virus">
+            <h3 class="titulo-virus" style="cursor:pointer;">Adware</h3>
+            <div class="contenido-virus">
+                <p>Software que muestra publicidad no deseada (pop-ups, banners, etc.) y a veces redirige a sitios sospechosos. Puede ser molesto y en algunos casos recopilar datos del usuario. </p>
+            </div>
+        </div>
+
+        <div class="seccion-virus">
+            <h3 class="titulo-virus" style="cursor:pointer;">Rootkits</h3>
+            <div class="contenido-virus">
+                <p>Son programas diseñados para ocultar la presencia de malware en un sistema, dándole al atacante acceso administrativo encubierto. Son difíciles de detectar y eliminar. </p>
+            </div>
+        </div>
+
+        <div class="seccion-virus">
+            <h3 class="titulo-virus" style="cursor:pointer;">Worms</h3>
+            <div class="contenido-virus">
+                <p>Son programas que se replican y propagan automáticamente por redes o dispositivos, sin necesidad de intervención del usuario. Pueden saturar redes y causar colapsos masivos. </p>
+            </div>
+        </div>
+
+        <div class="seccion-virus">
+            <h3 class="titulo-virus" style="cursor:pointer;">Troyanos</h3>
+            <div class="contenido-virus">
+                <p>Parecen programas legítimos, pero en realidad contienen código malicioso que abre puertas traseras en el sistema, permitiendo a los atacantes tomar el control o robar información. </p>
+            </div>
+        </div>
+
+        <div class="seccion-virus">
+            <h3 class="titulo-virus" style="cursor:pointer;">Botnets</h3>
+            <div class="contenido-virus">
+                <p>Son redes de dispositivos infectados (bots) controlados de forma remota por un atacante. Se utilizan para realizar ataques coordinados, como el envío masivo de spam o ataques DDoS. </p>
+            </div>
+        </div>
+
+        <div class="seccion-virus">
+            <h3 class="titulo-virus" style="cursor:pointer;">Ataque DDoS</h3>
+            <div class="contenido-virus">
+                <p>Es un ataque que satura un servidor o red con una gran cantidad de tráfico desde múltiples fuentes, haciéndolo inaccesible para los usuarios legítimos. </p>
+            </div>
+        </div>
+
+        <div class="seccion-virus">
+            <h3 class="titulo-virus" style="cursor:pointer;">Zero-Day Exploits</h3>
+            <div class="contenido-virus">
+                <p>Son ataques que explotan vulnerabilidades desconocidas (sin parches disponibles) en software o hardware, antes de que los desarrolladores tengan tiempo de corregirlas. </p>
+            </div>
+        </div>
+
+        <div class="seccion-virus">
+            <h3 class="titulo-virus" style="cursor:pointer;">Man in the Middle (MitM)</h3>
+            <div class="contenido-virus">
+                <p>El atacante intercepta y manipula la comunicación entre dos partes sin que ellas lo sepan. Puede robar datos o alterar la información transmitida, como en redes Wi-Fi públicas inseguras. </p>
+            </div>
+        </div>
+
+    </main>
+
+
+    <div class="container my-5">
+        <h2 class="mb-4">Casos reales de ciberataques</h2>
+        <div class="accordion" id="casosReales">
+            <div class="accordion-item bg-dark text-light">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#caso1">
+                Caso 1: WannaCry
+                </button>
+            </h2>
+            <div id="caso1" class="accordion-collapse collapse" data-bs-parent="#casosReales">
+                <div class="accordion-body">
+                En 2017, el ransomware WannaCry afectó a más de 200,000 computadoras en 150 países. Cifraba archivos y pedía rescate en bitcoins.
+                </div>
+            </div>
+            </div>
+            <div class="accordion-item bg-dark text-light">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#caso2">
+                Caso 2: Ataque de phishing a Google y Facebook
+                </button>
+            </h2>
+            <div id="caso2" class="accordion-collapse collapse" data-bs-parent="#casosReales">
+                <div class="accordion-body">
+                Entre 2013 y 2015, un hacker estonio engañó a ambas empresas con facturas falsas, robando más de 100 millones de dólares.
+                </div>
+            </div>
+            </div>
+            <div class="accordion-item bg-dark text-light">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#caso3">
+                Caso 3: DDoS a Dyn (2016)
+                </button>
+            </h2>
+            <div id="caso3" class="accordion-collapse collapse" data-bs-parent="#casosReales">
+                <div class="accordion-body">
+                Un ataque DDoS masivo a Dyn, proveedor de DNS, provocó la caída de servicios como Twitter, Netflix y Spotify en Estados Unidos.
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+
+{% block extra_js %}
+<script src="{% static 'JS/script_cyber.js' %}"></script>
+{% endblock %}
+
+
+{% endblock %}

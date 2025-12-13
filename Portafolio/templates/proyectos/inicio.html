@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<style>
+/* Dark mode always on */
+body {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+}
+
+/* Hero section */
+.hero-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
+                    url("{% static 'presentacion/hero_bg.jpeg' %}");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 100px 20px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-bg h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1rem;
+}
+
+.hero-bg .lead {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Cards and lists - dark mode styling */
+.card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: #e0e0e0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(96, 165, 250, 0.2);
+}
+
+/* Buttons */
+.btn-outline-primary {
+    border-color: #60a5fa;
+    color: #60a5fa;
+}
+
+.btn-outline-primary:hover {
+    background-color: #60a5fa;
+    color: #0a0a0a;
+}
+
+/* Responsive container */
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+}
+</style>
+
+<!-- Hero principal -->
+<section class="text-white position-relative hero-bg">
+    <h1 class="display-4 fw-bold mb-3 text-center">
+        Projects
+    </h1>
+    <p class="lead text-center">
+        Explore my portfolio projects in Astronomy and programming.
+    </p>
+</section>
+
+<!-- Contenido principal -->
+<div class="container my-5">
+
+    <!-- PROYECTOS PRINCIPALES -->
+    <section class="mb-5">
+        <h3 class="fw-bold mb-3">Project Pages</h3>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card shadow-sm p-4 text-center">
+                    <h5 class="fw-bold">Project 1: Meme gallery</h5>
+                    <p class="text-muted"></p>
+                    <a href="{% url 'proyectos:proyecto 1' %}" class="btn btn-outline-primary mt-2" target="_blank">Open Page</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow-sm p-4 text-center">
+                    <h5 class="fw-bold">Project 2: Cybersecurity Forum</h5>
+                    <p class="text-muted"></p>
+                    <a href="{% url 'proyectos:proyecto 2' %}" class="btn btn-outline-primary mt-2" target="_blank">Open Page</a>
+                </div>
+            </div>
+
+
+    </section>
+
+</div>
+
+{% endblock %}
