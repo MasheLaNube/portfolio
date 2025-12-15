@@ -1,0 +1,7 @@
+Django==6.0.*
+gunicorn
+psycopg2-binary  # si usas PostgreSQL
+pymysql      
+django-cloudinary-storage
+whitenoise
+pillow
