@@ -1,8 +1,7 @@
 # 🌌 Portafolio Técnico — Marcela López
 
 Hola 👋  
-Soy **Marcela López**, estudiante de ciencias y desarrolladora en formación con interés en
-astronomía, análisis de datos y desarrollo web con Python y Django.
+Soy **Marcela López**, estudiante de doctorado en Astronomía y desarrolladora en formación con interés en análisis de datos y desarrollo web con Python y Django.
 
 Este repositorio reúne algunos de mis proyectos técnicos y académicos.
 
@@ -13,7 +12,7 @@ Este repositorio reúne algunos de mis proyectos técnicos y académicos.
 ### 🔹 Portafolio Web en Django
 📌 Sitio web personal con estructura modular y diseño personalizado.  
 🔗 Repositorio: https://github.com/MasheLaNube/portfolio  
-🌐 Demo: (link del hosting cuando lo tengas)
+🌐 Demo: (https://portfolio-production-d0d0.up.railway.app/)
 
 **Tecnologías:**
 - Python
@@ -44,7 +43,7 @@ Este repositorio reúne algunos de mis proyectos técnicos y académicos.
 
 ## 📹 Video Técnico
 🎥 Explicación del proyecto y su funcionamiento:  
-👉 https://youtube.com/xxxx
+👉 https://youtu.be/P7WBPozKWgY
 
 ---
 
