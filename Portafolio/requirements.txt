@@ -5,3 +5,4 @@ mysqlclient       # si usas MySQL
 pymysql		 # Si se usa Linux
 Pillow
 whitenoise
+cloudinary
