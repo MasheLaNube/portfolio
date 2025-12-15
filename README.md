@@ -25,7 +25,7 @@ Este repositorio reúne algunos de mis proyectos técnicos y académicos.
 
 ### 🔹 Proyecto UX/UI (Behance)
 📌 Diseño conceptual enfocado en experiencia de usuario.  
-🎨 Behance: (link cuando lo subas)
+🎨 Behance: https://www.behance.net/portfolio/editor?project_id=240522303
 
 ---
 
