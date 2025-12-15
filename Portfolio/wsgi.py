@@ -1,5 +1,5 @@
 """
-WSGI config for Portafolio project.
+WSGI config for Portfolio project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
