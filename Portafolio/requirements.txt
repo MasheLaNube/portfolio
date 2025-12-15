@@ -2,3 +2,6 @@ Django==6.0.*
 gunicorn
 psycopg2-binary  # si usas PostgreSQL
 mysqlclient       # si usas MySQL
+pymysql		 # Si se usa Linux
+Pillow
+whitenoise
