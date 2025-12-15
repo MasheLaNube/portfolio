@@ -24,6 +24,7 @@ ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
     ".railway.app",
+    "portfolio-production-d0d0.up.railway.app",
 ]
 
 # Aplicaciones
@@ -75,20 +76,17 @@ WSGI_APPLICATION = 'Portfolio.wsgi.application'
 # Base de datos
 DJANGO_ENV = os.getenv("DJANGO_ENV", "local")
 
-if DJANGO_ENV == "production":
-    DATABASES = {
-        "default": dj_database_url.config(
-            conn_max_age=600,
-            ssl_require=True
-        )
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'productos_db',
+        'USER': 'mashe',
+        'PASSWORD': 'SandiaOrion26!',
+        'HOST': 'postgres-cncu-production.up.railway.app',
+        'PORT': '5432',
     }
-else:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / "db.sqlite3",
-        }
-    }
+}
+
 
 
 # Validación de contraseñas
