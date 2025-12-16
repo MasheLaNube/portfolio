@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'productos_db',
         'USER': 'mashe',
         'PASSWORD': 'SandiaOrion26!',
-        'HOST': 'metro.proxy.rlwy.net',
+        'HOST': 'postgresql://postgres:OWndwfwDhekoXmnjrLQAbJhSTzYRWxzE@postgres.railway.internal:5432/railway',
         'PORT': '5432',
     }
 }
