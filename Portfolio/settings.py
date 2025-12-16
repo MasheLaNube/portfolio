@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'productos_db',
         'USER': 'mashe',
         'PASSWORD': 'SandiaOrion26!',
-        'HOST': 'postgres-cncu-production.up.railway.app',
+        'HOST': 'metro.proxy.rlwy.net',
         'PORT': '5432',
     }
 }
