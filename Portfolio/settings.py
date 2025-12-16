@@ -83,12 +83,10 @@ DATABASES = {
     )
 }
 
-# Configuración SSL para Railway (conexión pública)
-if not os.environ.get('DATABASE_URL', '').endswith('.railway.internal:5432/railway'):
-    # Solo para conexiones públicas (metro.proxy.rlwy.net)
-    DATABASES['default']['OPTIONS'] = {
-        'sslmode': 'require',
-    }
+# Permitir SSL pero no requerirlo estrictamente
+DATABASES['default']['OPTIONS'] = {
+    'sslmode': 'prefer',
+}
 
 
 
