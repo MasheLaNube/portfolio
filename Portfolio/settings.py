@@ -83,9 +83,9 @@ DATABASES = {
     )
 }
 
-# Permitir SSL pero no requerirlo estrictamente
+# Deshabilitar SSL para Railway
 DATABASES['default']['OPTIONS'] = {
-    'sslmode': 'prefer',
+    'sslmode': 'disable',
 }
 
 
