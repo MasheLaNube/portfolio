@@ -77,14 +77,10 @@ WSGI_APPLICATION = 'Portfolio.wsgi.application'
 DJANGO_ENV = os.getenv("DJANGO_ENV", "local")
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'productos_db',
-        'USER': 'mashe',
-        'PASSWORD': 'SandiaOrion26!',
-        'HOST': 'postgresql://postgres:OWndwfwDhekoXmnjrLQAbJhSTzYRWxzE@postgres.railway.internal:5432/railway',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL'),
+        conn_max_age=600
+    )
 }
 
 
