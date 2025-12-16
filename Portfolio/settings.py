@@ -78,12 +78,17 @@ DJANGO_ENV = os.getenv("DJANGO_ENV", "local")
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('postgresql://postgres:OWndwfwDhekoXmnjrLQAbJhSTzYRWxzE@postgres.railway.internal:5432/railway'),
+        default=os.environ.get('DATABASE_URL'),
         conn_max_age=600,
-        conn_health_checks=True,
-        ssl_require=False,  # Railway usa red interna sin SSL
     )
 }
+
+# Configuración SSL para Railway (conexión pública)
+if not os.environ.get('DATABASE_URL', '').endswith('.railway.internal:5432/railway'):
+    # Solo para conexiones públicas (metro.proxy.rlwy.net)
+    DATABASES['default']['OPTIONS'] = {
+        'sslmode': 'require',
+    }
 
 
 
