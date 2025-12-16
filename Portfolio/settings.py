@@ -26,6 +26,12 @@ ALLOWED_HOSTS = [
     ".railway.app",
     "portfolio-production-d0d0.up.railway.app",
 ]
+if not DEBUG:
+    CSRF_TRUSTED_ORIGINS = [
+        "https://portfolio-production-d0d0.up.railway.app",
+    ]
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
 # Aplicaciones
 INSTALLED_APPS = [
@@ -132,3 +138,4 @@ CLOUDINARY_STORAGE = {
     'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
     'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
 }
+
